@@ -7,9 +7,9 @@ while True:
                               , "key":key})
     headers = {"Content-typZZe": "application/x-www-form-urlencoded","Accept": "text/plain"}
     conn = httplib.HTTPConnection("api.thingspeak.com:80")
-            try:
-                conn.request("POST", "/update", params, headers)
-                conn.close()
-                break
-            except:
-                print "connection failed"
+    try:
+        conn.request("POST", "/update", params, headers)
+        conn.close()
+        break
+    except:
+        print "connection failed"
